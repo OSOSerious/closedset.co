@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClosedSet.co - Business Model & SOP</title>
+    <!-- Tailwind CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <!-- Alpine.js for interactivity -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/2.3.0/alpine.js" defer></script>
+    <!-- Font Awesome for Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <!-- Custom Styles -->
+    <style>
+        :root {
+            --color-primary: #a95e48;
+            --color-secondary: #dd7b5e;
+            --color-accent: #ffab91;
+            --color-background: #f3f3f3;
+            --color-text: #434343;
+        }
+        .bg-primary { background-color: var(--color-primary); }
+        .bg-secondary { background-color: var(--color-secondary); }
+        .bg-accent { background-color: var(--color-accent); }
+        .text-primary { color: var(--color-primary); }
+        .text-secondary { color: var(--color-secondary); }
+        .text-accent { color: var(--color-accent); }
+        .border-primary { border-color: var(--color-primary); }
+        .border-secondary { border-color: var(--color-secondary); }
+        .border-accent { border-color: var(--color-accent); }
+        body {
+            background-color: var(--color-background);
+            color: var(--color-text);
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+        /* Responsive Navigation */
+        @media (max-width: 768px) {
+            .mobile-menu {
+                display: none;
+            }
+            .mobile-menu.active {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body class="font-sans">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md p-4 sticky top-0 z-50" x-data="{ open: false }">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-primary">ClosedSet.co</a>
+            <div class="hidden md:flex space-x-6">
+                <a href="#about" class="text-gray-600 hover:text-primary transition duration-300">About Us</a>
+                <a href="#goals" class="text-gray-600 hover:text-primary transition duration-300">Goals & Strategy</a>
+                <a href="#core-features" class="text-gray-600 hover:text-primary transition duration-300">Core Features</a>
+                <a href="#benefits" class="text-gray-600 hover:text-primary transition duration-300">Benefits</a>
+                <a href="#how-it-works" class="text-gray-600 hover:text-primary transition duration-300">How It Works</a>
+                <a href="#pricing" class="text-gray-600 hover:text-primary transition duration-300">Pricing & ROI</a>
+                <a href="#team" class="text-gray-600 hover:text-primary transition duration-300">Our Team</a>
+                <a href="#business-model" class="text-gray-600 hover:text-primary transition duration-300">Business Model</a>
+                <a href="#sop" class="text-gray-600 hover:text-primary transition duration-300">SOP</a>
+            </div>
+            <button @click="open = !open" class="md:hidden text-gray-600 hover:text-primary focus:outline-none">
+                <i class="fas fa-bars fa-2x"></i>
+            </button>
+            <div :class="{'block': open, 'hidden': !open}" class="mobile-menu md:hidden absolute top-16 left-0 w-full bg-white shadow-md p-4">
+                <a href="#about" class="block text-gray-600 hover:text-primary mb-2">About Us</a>
+                <a href="#goals" class="block text-gray-600 hover:text-primary mb-2">Goals & Strategy</a>
+                <a href="#core-features" class="block text-gray-600 hover:text-primary mb-2">Core Features</a>
+                <a href="#benefits" class="block text-gray-600 hover:text-primary mb-2">Benefits</a>
+                <a href="#how-it-works" class="block text-gray-600 hover:text-primary mb-2">How It Works</a>
+                <a href="#pricing" class="block text-gray-600 hover:text-primary mb-2">Pricing & ROI</a>
+                <a href="#team" class="block text-gray-600 hover:text-primary mb-2">Our Team</a>
+                <a href="#business-model" class="block text-gray-600 hover:text-primary mb-2">Business Model</a>
+                <a href="#sop" class="block text-gray-600 hover:text-primary mb-2">SOP</a>
+            </div>
+            <button class="hidden md:block bg-primary text-white px-4 py-2 rounded-full hover:bg-secondary transition duration-300">Request Demo</button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="gradient-bg text-white py-24">
+        <div class="container mx-auto text-center px-4">
+            <h1 class="text-5xl font-bold mb-6">Protect Studios and Talent with Blockchain Security</h1>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">Offering online security solutions for sensitive production information to ensure integrity in the creative process.</p>
+            <button class="bg-white text-primary px-8 py-3 rounded-full text-lg font-semibold hover:bg-accent hover:text-white transition duration-300">Get Started</button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto p-8">
+        <!-- Introduction Section -->
+        <section id="about" class="mb-20">
+            <h2 class="text-4xl font-semibold mb-8 text-center text-primary">What is ClosedSet.ai?</h2>
+            <div class="bg-white p-8 rounded-lg shadow-lg">
+                <p class="text-lg text-gray-700 max-w-3xl mx-auto">
+                    ClosedSet.ai is an innovative solution developed by an intimacy coordinator and a tech expert specializing in blockchain and AI. It provides robust security for sensitive production data, ensuring protection for both studios and talent.
+                </p>
+            </div>
+        </section>
+
+        <!-- Mission Statement Section -->
+        <section id="mission" class="mb-20">
+            <h2 class="text-4xl font-semibold mb-8 text-center text-primary">Our Mission</h2>
+            <div class="bg-white p-8 rounded-lg shadow-lg">
+                <p class="text-lg text-gray-700 max-w-3xl mx-auto">
+                    ClosedSet aims to create systems of integrity by using blockchain steganography to protect sensitive production information, ensuring online security for both talent and studios.
+                </p>
+            </div>
+        </section>
+
+        <!-- Goals & Strategy Section -->
+        <section id="goals" class="mb-20">
+            <h2 class="text-4xl font-semibold mb-8 text-center text-primary">Goals & Strategy</h2>
+            <div class="bg-white p-8 rounded-lg shadow-lg">
+                <ul class="list-disc pl-5 space-y-2">
+                    <li><strong>Protect Talent:</strong> Safeguard images and continuity footage, especially for intimate and/or nude scenes.</li>
+                    <li><strong>Blockchain Security:</strong> Every individual who views or shares information has their own transaction wallet, allowing all transactions to be tracked and logged.</li>
+                    <li><strong>Expiration Management:</strong> Information shared automatically expires in 72 hours, but talent or studios can extend the expiration in 48-hour increments.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Core Features Section -->
+        <section id="core-features" class="mb-20">
+            <h2 class="text-4xl font-semibold mb-8 text-center text-primary">Key Features of ClosedSet.ai</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-lg card-hover">
+                    <i class="fas fa-lock text-4xl text-secondary mb-4"></i>
+                    <h3 class="text-2xl font-semibold mb-2 text-primary">Blockchain Steganography</h3>
+                    <p class="text-gray-600">Safeguard sensitive production information using cutting-edge blockchain technology.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg card-hover">
+                    <i class="fas fa-wallet text-4xl text-secondary mb-4"></i>
+                    <h3 class="text-2xl font-semibold mb-2 text-primary">Trackable Transactions</h3>
+                    <p class="text-gray-600">Every user has an individual wallet, and each transaction is logged for complete transparency.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg card-hover">
+                    <i class="fas fa-hourglass-half text-4xl text-secondary mb-4"></i>
+                    <h3 class="text-2xl font-semibold mb-2 text-primary">Automatic Expiry</h3>
+                    <p class="text-gray-600">Shared information has a 72-hour expiration, extendable in 48-hour increments, giving control to studios and talent.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg card-hover">
+                    <i class="fas fa-mobile-alt text-4xl text-secondary mb-4"></i>
+                    <h3 class="text-2xl font-semibold mb-2 text-primary">Protection Across Devices</h3>
+                    <p class="text-gray-600">Regardless of the platform used, every transaction is secure.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Benefits Section -->
+        <section id="benefits" class="mb-20">
+            <h2 class="text-4xl font-semibold mb-8 text-center text-primary">Why Choose ClosedSet.ai?</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-lg card-hover">
+                    <i class="fas fa-shield-alt text-4xl text-secondary mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2 text-primary">Ultimate Security</h3>
+                    <p class="text-gray-600">Protects continuity footage, intimate scenes, talent images, NDAs, and other critical production information.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg card-hover">
+                    <i class="fas fa-user-lock text-4xl text-secondary mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2 text-primary">Talent Safety</h3>
+                    <p class="text-gray-600">Talent can upload sensitive photos directly to studio wallets, ensuring confidentiality.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg card-hover">
+                    <i class="fas fa-handshake text-4xl text-secondary mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2 text-primary">Secure Collaboration</h3>
+                    <p class="text-gray-600">Casting teams, directing staff, and talent can securely share sensitive data without fear of leaks.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- How It Works Section -->
+        <section id="how-it-works" class="mb-20">
+            <h2 class="text-4xl font-semibold mb-8 text-center text-primary">How It Works</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-2xl font-semibold mb-4 text-secondary">Upload Sensitive Information</h3>
+                    <p class="text-gray-600">Talent or studio uploads the data to ClosedSet.co, embedded with wallet information.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-2xl font-semibold mb-4 text-secondary">Encrypt and Share</h3>
+                    <p class="text-gray-600">Data is encrypted and shared only with necessary parties.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-2xl font-semibold mb-4 text-secondary">Track and Manage</h3>
+                    <p class="text-gray-600">Each transaction is tracked, with expiry dates and access controlled by talent and studios.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-2xl font-semibold mb-4 text-secondary">Secure Sharing</h3>
+                    <p class="text-gray-600">Data is protected from unauthorized online platforms.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing & ROI Section -->
+        <section id="pricing" class="mb-20" x-data="{ showPricing: false }">
+            <h2 class="text-4xl font-semibold mb-8 text-center text-primary">Pricing & ROI</h2>
+            <div class="bg-white p-8 rounded-lg shadow-lg">
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="text-center p-4 border-2 border-accent rounded-lg">
+                        <h3 class="text-2xl font-semibold mb-2 text-secondary">Talent Upload</h3>
+                        <p class="text-3xl font-bold text-primary mb-4">Free</p>
+                        <p class="text-gray-600">For individual talent to upload</p>
+                    </div>
+                    <div class="text-center p-4 border-2 border-accent rounded-lg">
+                        <h3 class="text-2xl font-semibold mb-2 text-secondary">Independent Films & Studios</h3>
+                        <p class="text-3xl font-bold text-primary mb-4">Custom</p>
+                        <p class="text-gray-600">Pricing varies based on the number of users and productions.</p>
+                    </div>
+                    <div class="text-center p-4 border-2 border-accent rounded-lg">
+                        <h3 class="text-2xl font-semibold mb-2 text-secondary">Enterprise</h3>
+                        <p class="text-3xl font-bold text-primary mb-4">Contact Us</p>
+                        <p class="text-gray-600">Get a personalized quote tailored to your needs.</p>
+                    </div>
+                </div>
+                <div class="text-center mt-8">
+                    <button @click="showPricing = !showPricing" class="bg-secondary text-white px-6 py-3 rounded-full hover:bg-primary transition duration-300">
+                        Show Detailed Pricing
+                    </button>
+                </div>
+                <div x-show="showPricing" class="mt-8 text-center">
+                    <p class="text-lg text-gray-700">Contact our sales team for a customized quote based on your specific needs.</p>
+                    <a href="mailto:sales@closedset.co" class="text-primary hover:underline">sales@closedset.co</a>
+                </div>
+            </div>
+            <div class="mt-12 text-center">
+                <h3 class="text-2xl font-semibold mb-4 text-secondary">Return on Investment (ROI)</h3>
+                <p class="text-xl text-gray-700">How much is protecting sensitive information worth to your studio?</p>
+                <p class="mt-4 text-gray-600">Protect your assets, talent, and reputation with ClosedSet.co</p>
+            </div>
+        </section>
+
+        <!-- Benefits of Blockchain Technology Section -->
+        <section id="blockchain-benefits" class="mb-20">
+            <h2 class="text-4xl font-semibold mb-8 text-center text-primary">Blockchain Technology and Online Safety</h2>
+            <div class="bg-white p-8 rounded-lg shadow-lg">
+                <p class="text-lg text-gray-700 mb-6">
+                    ClosedSet utilizes blockchain to ensure security for sensitive production information. Every transaction involving sensitive data is encoded and embedded with a unique wallet ID, making it trackable and identifiable across various platforms. The system is designed to be used across devices for both talent and studios, ensuring seamless protection regardless of the technology employed.
+                </p>
+                <ul class="list-disc pl-5 space-y-2">
+                    <li><strong>Continuity Footage</strong></li>
+                    <li><strong>Talent Images</strong></li>
+                    <li><strong>Body and/or Stunt Doubles</strong></li>
+                    <li><strong>Intimate Scenes</strong>: Initially developed for the protection of sensitive materials like nude photos for casting, but can also be applied to contracts, NDAs, script changes, and personnel info.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Technical Pathway Section -->
+        <section id="technical-pathway" class="mb-20">
+            <h2 class="text-4xl font-semibold mb-8 text-center text-primary">Technical Pathway</h2>
+            <div class="bg-white p-8 rounded-lg shadow-lg">
+                <ol class="list-decimal pl-5 space-y-4">
+                    <li><strong>Upload Content:</strong> Talent or production uploads sensitive data.</li>
+                    <li><strong>Embed with Wallet Info:</strong> Data is embedded with individual wallet information.</li>
+                    <li><strong>Encryption:</strong> Data is encrypted and shared with necessary parties.</li>
+                    <li><strong>Tracking and Identifying:</strong> Each interaction with the content is tracked and identifiable.</li>
+                    <li><strong>Secure Sharing:</strong> Data is protected from unauthorized online platforms.</li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- Applications Beyond Talent Protection Section -->
+        <section id="applications" class="mb-20">
+            <h2 class="text-4xl font-semibold mb-8 text-center text-primary">Applications Beyond Talent Protection</h2>
+            <div class="bg-white p-8 rounded-lg shadow-lg">
+                <ul class="list-disc pl-5 space-y-2">
+                    <li>NDAs (Non-disclosure agreements)</li>
+                    <li>Contracts and Riders</li>
+                    <li>Script Changes</li>
+                    <li>Personnel Information</li>
+                    <li>Continuity Photos</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Promotion Strategy Section -->
+        <section id="promotion-strategy" class="mb-20">
+            <h2 class="text-4xl font-semibold mb-8 text-center text-primary">Promotion Strategy</h2>
+            <div class="bg-white p-8 rounded-lg shadow-lg">
+                <ul class="list-disc pl-5 space-y-2">
+                    <li><strong>Social Media:</strong> Focus on the film industry and targeted social media channels.</li>
+                    <li><strong>Billboards and Ads:</strong> Leverage traditional advertising like billboards for brand awareness.</li>
+                    <li><strong>Speaker Opportunities:</strong> Participate in relevant industry conferences and events to share expertise and market the product.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Core Audience and Market Strategy Section -->
+        <section id="market-strategy" class="mb-20">
+            <h2 class="text-4xl font-semibold mb-8 text-center text-primary">Core Audience and Market Strategy</h2>
+            <div class="bg-white p-8 rounded-lg shadow-lg">
+                <h3 class="text-2xl font-semibold mb-4 text-secondary">Core Audiences</h3>
+                <ul class="list-disc pl-5 space-y-2 mb-6">
+                    <li>Primarily 18-25-year-olds</li>
+                    <li>Followed by the 25-45 demographic</li>
+                </ul>
+                <h3 class="text-2xl font-semibold mb-4 text-secondary">Market Share</h3>
+                <p class="text-gray-600 mb-6">
+                    Targeting theaters and online streaming platforms for the distribution and protection of sensitive production information.
+                </p>
+                <h3 class="text-2xl font-semibold mb-4 text-secondary">Key Metrics and Growth Indicators</h3>
+                <ul class="list-disc pl-5 space-y-2">
+                    <li>5,000 theaters targeted for partnerships.</li>
+                    <li>Anticipated 2,000 theaters under contract within a defined timeline.</li>
+                    <li>Market share divided across key age ranges and digital platforms.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Budget Allocation Section -->
+        <section id="budget-allocation" class="mb-20">
+            <h2 class="text-4xl font-semibold mb-8 text-center text-primary">Budget Allocation</h2>
+            <div class="bg-white p-8 rounded-lg shadow-lg">
+                <ul class="list-disc pl-5 space-y-2">
+                    <li><strong>$2,000 for Jupiter:</strong> Security-related tasks.</li>
+                    <li><strong>$3,100 for Mercury:</strong> Development and testing.</li>
+                    <li><strong>$400 for Venus:</strong> UI/UX improvements.</li>
+                    <li><strong>$1,300 for Mars:</strong> Promotions and outreach.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Customer Demographics Section -->
+        <section id="customer-demographics" class="mb-20">
+            <h2 class="text-4xl font-semibold mb-8 text-center text-primary">Customer Demographics</h2>
+            <div class="bg-white p-8 rounded-lg shadow-lg">
+                <h3 class="text-2xl font-semibold mb-4 text-secondary">Core Audience</h3>
+                <p class="text-gray-600 mb-6">
+                    Primarily aimed at the 18-25-year-old demographic, which makes up about 60% of our expected customer base.
+                </p>
+                <h3 class="text-2xl font-semibold mb-4 text-secondary">Broader Audience</h3>
+                <ul class="list-disc pl-5 space-y-2">
+                    <li>25-45-year-olds</li>
+                    <li>45-65-year-olds</li>
+                    <li>Professionals in various production roles</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Additional Product Uses Section -->
+        <section id="additional-uses" class="mb-20">
+            <h2 class="text-4xl font-semibold mb-8 text-center text-primary">Additional Product Uses</h2>
+            <div class="bg-white p-8 rounded-lg shadow-lg">
+                <ul class="list-disc pl-5 space-y-2">
+                    <li>NDAs (Non-disclosure agreements)</li>
+                    <li>Contracts and Riders</li>
+                    <li>Script Changes</li>
+                    <li>Personnel Information</li>
+                    <li>Continuity Photos</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Technology Pathway Section -->
+        <section id="technology-pathway" class="mb-20">
+            <h2 class="text-4xl font-semibold mb-8 text-center text-primary">Technology Pathway</h2>
+            <div class="bg-white p-8 rounded-lg shadow-lg">
+                <ol class="list-decimal pl-5 space-y-4">
+                    <li><strong>Encrypted Upload:</strong> Sensitive production information (such as talent photos or intimate scene details) is uploaded and encrypted.</li>
+                    <li><strong>Individual Wallet Embed:</strong> The information is embedded with individual wallet details to track each transaction.</li>
+                    <li><strong>Secure Sharing:</strong> The encrypted data is shared only with necessary parties (like casting directors, intimacy coordinators, and the production team).</li>
+                    <li><strong>Trackable and Identifiable:</strong> Each action, including viewing and sharing, is fully trackable and identifiable through the blockchain.</li>
+                    <li><strong>Protection from Online Platforms:</strong> The system prevents unauthorized access or distribution on online platforms, protecting sensitive content.</li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- Goals for Online Safety Section -->
+        <section id="online-safety-goals" class="mb-20">
+            <h2 class="text-4xl font-semibold mb-8 text-center text-primary">Goals for Online Safety</h2>
+            <div class="bg-white p-8 rounded-lg shadow-lg">
+                <ul class="list-disc pl-5 space-y-2">
+                    <li>Every individual involved in viewing or sharing sensitive information is assigned an individual wallet.</li>
+                    <li>All transactions related to the information (uploads, views, and shares) are encoded and tracked for full transparency.</li>
+                    <li>The platform ensures that no matter what device is used, online security remains uncompromised for both talent and studios.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Extended Expiration Feature Section -->
+        <section id="expiration-feature" class="mb-20">
+            <h2 class="text-4xl font-semibold mb-8 text-center text-primary">Extended Expiration Feature</h2>
+            <div class="bg-white p-8 rounded-lg shadow-lg">
+                <p class="text-lg text-gray-700 mb-6">
+                    Shared information has an automatic expiration after 72 hours, but this can be extended in 48-hour increments by the talent or studio for ongoing use, adding flexibility and control.
+                </p>
+            </div>
+        </section>
+
+        <!-- Key Partnerships Section -->
+        <section id="key-partnerships" class="mb-20">
+            <h2 class="text-4xl font-semibold mb-8 text-center text-primary">Key Partnerships</h2>
+            <div class="bg-white p-8 rounded-lg shadow-lg">
+                <ul class="list-disc pl-5 space-y-2">
+                    <li>Technology Partners (Blockchain Providers)</li>
+                    <li>Industry Associations</li>
+                    <li>Casting Agencies and Talent Agencies</li>
+                    <li>Intimacy Coordination Professionals</li>
+                    <li>Legal Advisors</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Our Team Section -->
+        <section id="team" class="mb-20">
+            <h2 class="text-4xl font-semibold mb-8 text-center text-primary">Meet Our Experts</h2>
+            <div class="flex flex-col md:flex-row justify-center items-center space-y-8 md:space-y-0 md:space-x-16">
+                <div class="text-center">
+                    <img src="https://via.placeholder.com/150" alt="Nicole Perry" class="w-32 h-32 rounded-full mx-auto mb-4 border-4 border-accent">
+                    <h3 class="text-xl font-semibold text-secondary">Nicole Perry, MFA</h3>
+                    <p class="text-gray-600">Certified Intimacy Coordinator</p>
+                </div>
+                <div class="text-center">
+                    <img src="https://via.placeholder.com/150" alt="Pedram Nimreezi" class="w-32 h-32 rounded-full mx-auto mb-4 border-4 border-accent">
+                    <h3 class="text-xl font-semibold text-secondary">Pedram Nimreezi</h3>
+                    <p class="text-gray-600">Blockchain Expert</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Business Model Section -->
+        <section id="business-model" class="mb-20">
+            <h2 class="text-4xl font-semibold mb-8 text-center text-primary">Business Model</h2>
+            <div class="bg-white p-8 rounded-lg shadow-lg">
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- Business Model Canvas -->
+                    <div>
+                        <h3 class="text-2xl font-semibold mb-4 text-secondary">Business Model Canvas</h3>
+                        <div class="space-y-4">
+                            <!-- Value Proposition -->
+                            <div>
+                                <h4 class="text-xl font-semibold">Value Proposition</h4>
+                                <p>Providing blockchain-based security solutions tailored for studios and talent to protect sensitive production data, ensuring confidentiality and integrity in the creative process.</p>
+                            </div>
+                            <!-- Customer Segments -->
+                            <div>
+                                <h4 class="text-xl font-semibold">Customer Segments</h4>
+                                <ul class="list-disc pl-5">
+                                    <li>Film Studios</li>
+                                    <li>Independent Filmmakers</li>
+                                    <li>Talent (Actors, Crew)</li>
+                                    <li>Casting Agencies</li>
+                                    <li>Intimacy Coordinators</li>
+                                </ul>
+                            </div>
+                            <!-- Channels -->
+                            <div>
+                                <h4 class="text-xl font-semibold">Channels</h4>
+                                <ul class="list-disc pl-5">
+                                    <li>Website and Online Platform</li>
+                                    <li>Industry Conferences and Events</li>
+                                    <li>Partnerships with Casting Agencies</li>
+                                    <li>Direct Sales Team</li>
+                                    <li>Digital Marketing (SEO, SEM, Social Media)</li>
+                                </ul>
+                            </div>
+                            <!-- Customer Relationships -->
+                            <div>
+                                <h4 class="text-xl font-semibold">Customer Relationships</h4>
+                                <ul class="list-disc pl-5">
+                                    <li>Personalized Onboarding</li>
+                                    <li>Dedicated Customer Support</li>
+                                    <li>Regular Updates and Enhancements</li>
+                                    <li>Community Building through Forums and Webinars</li>
+                                </ul>
+                            </div>
+                            <!-- Revenue Streams -->
+                            <div>
+                                <h4 class="text-xl font-semibold">Revenue Streams</h4>
+                                <ul class="list-disc pl-5">
+                                    <li>Subscription Fees (Monthly/Annual)</li>
+                                    <li>Enterprise Licensing</li>
+                                    <li>Custom Solutions and Integrations</li>
+                                    <li>Premium Support Packages</li>
+                                </ul>
+                            </div>
+                            <!-- Key Resources -->
+                            <div>
+                                <h4 class="text-xl font-semibold">Key Resources</h4>
+                                <ul class="list-disc pl-5">
+                                    <li>Blockchain Technology</li>
+                                    <li>Expert Team (Blockchain Experts, Intimacy Coordinators)</li>
+                                    <li>Secure Cloud Infrastructure</li>
+                                    <li>Intellectual Property (Patents, Proprietary Algorithms)</li>
+                                    <li>Brand Reputation</li>
+                                </ul>
+                            </div>
+                            <!-- Key Activities -->
+                            <div>
+                                <h4 class="text-xl font-semibold">Key Activities</h4>
+                                <ul class="list-disc pl-5">
+                                    <li>Platform Development and Maintenance</li>
+                                    <li>Customer Support and Training</li>
+                                    <li>Marketing and Sales</li>
+                                    <li>Research and Development</li>
+                                    <li>Partnership Management</li>
+                                </ul>
+                            </div>
+                            <!-- Key Partnerships -->
+                            <div>
+                                <h4 class="text-xl font-semibold">Key Partnerships</h4>
+                                <ul class="list-disc pl-5">
+                                    <li>Technology Partners (Blockchain Providers)</li>
+                                    <li>Industry Associations</li>
+                                    <li>Casting Agencies and Talent Agencies</li>
+                                    <li>Intimacy Coordination Professionals</li>
+                                    <li>Legal Advisors</li>
+                                </ul>
+                            </div>
+                            <!-- Cost Structure -->
+                            <div>
+                                <h4 class="text-xl font-semibold">Cost Structure</h4>
+                                <ul class="list-disc pl-5">
+                                    <li>Technology and Infrastructure Costs</li>
+                                    <li>Salaries and Employee Benefits</li>
+                                    <li>Marketing and Sales Expenses</li>
+                                    <li>Research and Development</li>
+                                    <li>Operational Overheads</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Visual Representation (Optional) -->
+                    <div>
+                        <h3 class="text-2xl font-semibold mb-4 text-secondary">Visual Representation</h3>
+                        <img src="https://via.placeholder.com/600x400" alt="Business Model Canvas" class="w-full rounded-lg shadow-lg">
+                        <p class="mt-2 text-gray-600 text-sm">[Placeholder for Business Model Canvas Image]</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SOP Section -->
+        <section id="sop" class="mb-20">
+            <h2 class="text-4xl font-semibold mb-8 text-center text-primary">Standard Operating Procedure (SOP)</h2>
+            <div class="bg-white p-8 rounded-lg shadow-lg">
+                <h3 class="text-2xl font-semibold mb-4 text-secondary">1. Overview</h3>
+                <p>This SOP outlines the procedures and guidelines for operating and maintaining the ClosedSet.co platform. The objective is to ensure consistency, efficiency, and security in all business operations.</p>
+
+                <h3 class="text-2xl font-semibold mt-6 mb-4 text-secondary">2. Purpose</h3>
+                <p>The purpose of this SOP is to provide clear instructions and standardized processes to ensure that all team members perform their tasks effectively and in alignment with the company’s goals.</p>
+
+                <h3 class="text-2xl font-semibold mt-6 mb-4 text-secondary">3. Scope</h3>
+                <p>This SOP applies to all employees, contractors, and partners involved in the development, maintenance, support, and management of the ClosedSet.co platform.</p>
+
+                <h3 class="text-2xl font-semibold mt-6 mb-4 text-secondary">4. Definitions</h3>
+                <ul class="list-disc pl-5">
+                    <li><strong>Platform:</strong> The ClosedSet.co online security solution.</li>
+                    <li><strong>Stakeholders:</strong> Employees, contractors, partners, and clients using the platform.</li>
+                    <li><strong>Security Protocols:</strong> Measures implemented to protect data integrity and confidentiality.</li>
+                </ul>
+
+                <h3 class="text-2xl font-semibold mt-6 mb-4 text-secondary">5. Procedures</h3>
+                <div class="space-y-4">
+                    <!-- Procedure 1 -->
+                    <div>
+                        <h4 class="text-xl font-semibold mb-2">5.1. Platform Development</h4>
+                        <ol class="list-decimal pl-5 space-y-2">
+                            <li>Use version control systems (e.g., Git) for all code repositories.</li>
+                            <li>Conduct regular code reviews to ensure quality and security standards.</li>
+                            <li>Implement continuous integration and continuous deployment (CI/CD) pipelines.</li>
+                            <li>Maintain comprehensive documentation for all development processes.</li>
+                        </ol>
+                    </div>
+                    <!-- Procedure 2 -->
+                    <div>
+                        <h4 class="text-xl font-semibold mb-2">5.2. Data Security</h4>
+                        <ol class="list-decimal pl-5 space-y-2">
+                            <li>Encrypt all sensitive data using industry-standard encryption algorithms.</li>
+                            <li>Implement multi-factor authentication (MFA) for all user accounts.</li>
+                            <li>Regularly update and patch all software components to protect against vulnerabilities.</li>
+                            <li>Conduct periodic security audits and penetration testing.</li>
+                        </ol>
+                    </div>
+                    <!-- Procedure 3 -->
+                    <div>
+                        <h4 class="text-xl font-semibold mb-2">5.3. Customer Support</h4>
+                        <ol class="list-decimal pl-5 space-y-2">
+                            <li>Provide multiple support channels (email, chat, phone) for customer inquiries.</li>
+                            <li>Respond to all support requests within 24 hours.</li>
+                            <li>Maintain a comprehensive knowledge base and FAQ section on the website.</li>
+                            <li>Collect and analyze customer feedback to improve the platform.</li>
+                        </ol>
+                    </div>
+                    <!-- Procedure 4 -->
+                    <div>
+                        <h4 class="text-xl font-semibold mb-2">5.4. Marketing and Sales</h4>
+                        <ol class="list-decimal pl-5 space-y-2">
+                            <li>Develop targeted marketing campaigns to reach key customer segments.</li>
+                            <li>Utilize SEO and SEM strategies to increase online visibility.</li>
+                            <li>Attend industry conferences and events to network and promote the platform.</li>
+                            <li>Implement a referral program to encourage word-of-mouth marketing.</li>
+                        </ol>
+                    </div>
+                    <!-- Procedure 5 -->
+                    <div>
+                        <h4 class="text-xl font-semibold mb-2">5.5. Partnership Management</h4>
+                        <ol class="list-decimal pl-5 space-y-2">
+                            <li>Identify and establish partnerships with key industry players.</li>
+                            <li>Negotiate mutually beneficial agreements with partners.</li>
+                            <li>Maintain regular communication with partners to ensure alignment.</li>
+                            <li>Evaluate and optimize partnership performance periodically.</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <h3 class="text-2xl font-semibold mt-6 mb-4 text-secondary">6. Responsibilities</h3>
+                <ul class="list-disc pl-5">
+                    <li><strong>Development Team:</strong> Responsible for building and maintaining the platform.</li>
+                    <li><strong>Security Team:</strong> Ensures data protection and platform security.</li>
+                    <li><strong>Customer Support Team:</strong> Handles user inquiries and issues.</li>
+                    <li><strong>Marketing Team:</strong> Drives brand awareness and customer acquisition.</li>
+                    <li><strong>Partnership Managers:</strong> Develop and maintain strategic partnerships.</li>
+                </ul>
+
+                <h3 class="text-2xl font-semibold mt-6 mb-4 text-secondary">7. Documentation</h3>
+                <ul class="list-disc pl-5">
+                    <li>Maintain up-to-date documentation for all processes and procedures.</li>
+                    <li>Ensure all team members have access to relevant documents.</li>
+                    <li>Regularly review and update documentation to reflect current practices.</li>
+                </ul>
+
+                <h3 class="text-2xl font-semibold mt-6 mb-4 text-secondary">8. Review and Update Process</h3>
+                <ul class="list-disc pl-5">
+                    <li>Conduct quarterly reviews of the SOP to ensure its effectiveness.</li>
+                    <li>Update the SOP as needed based on feedback and changing business needs.</li>
+                    <li>Communicate any changes to all relevant stakeholders promptly.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Call to Action Section -->
+        <section class="text-center gradient-bg text-white py-16 rounded-lg shadow-lg">
+            <h2 class="text-4xl font-semibold mb-4">Get Started with ClosedSet.co</h2>
+            <p class="text-xl mb-8">Ensure the safety and integrity of your production today.</p>
+            <button class="bg-white text-primary px-8 py-3 rounded-full text-lg font-semibold hover:bg-accent hover:text-white transition duration-300">Request a Demo</button>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-wrap justify-between">
+                <!-- Company Info -->
+                <div class="w-full md:w-1/3 mb-8 md:mb-0">
+                    <h3 class="text-2xl font-semibold mb-4 text-accent">ClosedSet.co</h3>
+                    <p class="text-gray-400">Online Security for Onset Creativity</p>
+                </div>
+                <!-- Quick Links -->
+                <div class="w-full md:w-1/3 mb-8 md:mb-0">
+                    <h4 class="text-lg font-semibold mb-4 text-accent">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#about" class="text-gray-400 hover:text-accent transition duration-300">About Us</a></li>
+                        <li><a href="#goals" class="text-gray-400 hover:text-accent transition duration-300">Goals & Strategy</a></li>
+                        <li><a href="#core-features" class="text-gray-400 hover:text-accent transition duration-300">Core Features</a></li>
+                        <li><a href="#benefits" class="text-gray-400 hover:text-accent transition duration-300">Benefits</a></li>
+                        <li><a href="#how-it-works" class="text-gray-400 hover:text-accent transition duration-300">How It Works</a></li>
+                        <li><a href="#pricing" class="text-gray-400 hover:text-accent transition duration-300">Pricing & ROI</a></li>
+                        <li><a href="#team" class="text-gray-400 hover:text-accent transition duration-300">Our Team</a></li>
+                        <li><a href="#business-model" class="text-gray-400 hover:text-accent transition duration-300">Business Model</a></li>
+                        <li><a href="#sop" class="text-gray-400 hover:text-accent transition duration-300">SOP</a></li>
+                    </ul>
+                </div>
+                <!-- Contact Info -->
+                <div class="w-full md:w-1/3">
+                    <h4 class="text-lg font-semibold mb-4 text-accent">Contact Us</h4>
+                    <p class="text-gray-400">Email: info@closedset.co</p>
+                    <p class="text-gray-400">Phone: (555) 123-4567</p>
+                    <div class="mt-4 flex space-x-4">
+                        <a href="#" class="text-2xl text-gray-400 hover:text-accent transition duration-300"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-2xl text-gray-400 hover:text-accent transition duration-300"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-2xl text-gray-400 hover:text-accent transition duration-300"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="text-2xl text-gray-400 hover:text-accent transition duration-300"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-8 text-center text-gray-500">
+                &copy; 2024 ClosedSet.co. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Optional: If you prefer using plain JavaScript for the mobile menu toggle
+        document.addEventListener('alpine:init', () => {
+            Alpine.data('nav', () => ({
+                open: false,
+            }));
+        });
+    </script>
+</body>
+</html>
